@@ -1,4 +1,5 @@
 const express = require("express");
+const passport = require('./passport');
 
 const routes = require("./routes");
 const mongoose = require("mongoose");
@@ -14,6 +15,9 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.use(routes);
+app.use(passport.initialize())
+app.use(passport.session()) // calls serializeUser and deserializeUser
+
 // Send every request to the React app
 // Define any API routes before this runs
 app.get("*", function(req, res) {
