@@ -1,25 +1,25 @@
 import React from "react";
 
-export function Input(props) {
+export function Input() {
   return (
     <div className="form-group">
-      <input className="form-control" {...props} />
+      <input className="form-control" />
     </div>
   );
 }
 
-export function TextArea(props) {
+export function TextArea() {
   return (
     <div className="form-group">
-      <textarea className="form-control" rows="20" {...props} />
+      <textarea className="form-control" rows="20" />
     </div>
   );
 }
 
-export function FormBtn(props) {
+export function FormBtn() {
   return (
-    <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
-      {props.children}
+    <button style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
+      Add Event
     </button>
   );
 }
