@@ -11,7 +11,17 @@ export function Input() {
 export function TextArea() {
   return (
     <div className="form-group">
-      <textarea className="form-control" rows="20" />
+      <textarea className="form-control" rows="8" />
+    </div>
+  );
+}
+
+export function ListItem() {
+  return (
+    <div className="form-group">
+        <li>
+          <input className="form-control" />
+        </li>
     </div>
   );
 }
