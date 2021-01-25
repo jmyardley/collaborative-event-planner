@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Input, FormBtn } from "./SignupForm";
+import { Input, FormBtn } from "../SignupForm";
 
 export default function Login() {
   const [formObject, setFormObject] = useState({})

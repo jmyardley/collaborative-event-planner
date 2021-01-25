@@ -1,12 +1,27 @@
 import React from "react";
 
-function Header() {
+function Header(props) {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a className="navbar-brand" href="/">
-      Collaborative Event Planner
-    </a>
-  </nav>
+    <ul className="nav nav-tabs">
+      <li className="nav-item">
+        <a
+          href="#landing"
+          onClick={() => props.handlePageChange("LandingPage")}
+          className={props.currentPage === "LandingPage" ? "nav-link active" : "nav-link"}
+        >
+          LandingPage
+        </a>
+      </li>
+      <li className="nav-item">
+        <a
+          href="#about"
+          onClick={() => props.handlePageChange("About")}
+          className={props.currentPage === "About" ? "nav-link active" : "nav-link"}
+        >
+          About
+        </a>
+      </li>
+      </ul>
   )
 }
 
