@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Input, FormBtn } from "./SignupForm";
-import API from "../utils/API";
+import { Input, FormBtn } from "../SignupForm";
+import API from "../../utils/API";
 
 export default function Signup() {
   const [formObject, setFormObject] = useState({})
