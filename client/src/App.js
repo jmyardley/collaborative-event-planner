@@ -12,6 +12,8 @@ class App extends Component {
     return (
       <Router>
         <Route exact path="/loginPage" component={Login} />
+        <Route exact path="/landingPage" component={LandingContainer} />
+        <Route exact path="/signUpPage" component={Signup} />
         <Route exact path="/" component={Signup} />
       </Router>
     );

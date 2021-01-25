@@ -5,7 +5,6 @@ import { Redirect, useHistory } from "react-router-dom";
 
 export default function Signup() {
   const [formObject, setFormObject] = useState({})
-  // const [targetUrl, setTargetUrl] = useState({})
   const [loggedIn, setLoggedIn] = useState(false);
 
   function handleInputChange(event) {
@@ -24,7 +23,7 @@ export default function Signup() {
   }
   return (
     <>
-    {loggedIn && <Redirect to="/loginPage" />}
+    {loggedIn && <Redirect to="/landingPage" />}
       <div className="container">
         <h1>Signup</h1>
         <form>
@@ -42,7 +41,7 @@ export default function Signup() {
             Submit
           </FormBtn>
         </form>
-        <a href="*">Already signed up? Log in</a>
+        <a href="loginPage">Already signed up? Log in</a>
       </div>
     </>
   )

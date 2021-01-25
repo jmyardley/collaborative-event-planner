@@ -9,16 +9,16 @@ function Header(props) {
           onClick={() => props.handlePageChange("LandingPage")}
           className={props.currentPage === "LandingPage" ? "nav-link active" : "nav-link"}
         >
-          LandingPage
+          My Events
         </a>
       </li>
       <li className="nav-item">
         <a
-          href="#about"
-          onClick={() => props.handlePageChange("About")}
-          className={props.currentPage === "About" ? "nav-link active" : "nav-link"}
+          href="#create"
+          onClick={() => props.handlePageChange("CreateEvent")}
+          className={props.currentPage === "CreateEvent" ? "nav-link active" : "nav-link"}
         >
-          About
+          Create Event
         </a>
       </li>
       </ul>
