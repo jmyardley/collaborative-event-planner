@@ -1,25 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
+import { Input, TextArea, FormBtn } from "../EventForm";
 
-export function Input() {
-  return (
-    <div className="form-group">
-      <input className="form-control" />
-    </div>
-  );
-}
+export default function CreateEvent() {
+  const [formObject, setFormObject] = useState({})
 
-export function TextArea() {
-  return (
-    <div className="form-group">
-      <textarea className="form-control" rows="20" />
-    </div>
-  );
-}
+  function handleInputChange(event){
+    const { name, value } = event.target;
+    setFormObject({...formObject, [name]: value})
+  }
 
-export function FormBtn() {
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
   return (
-    <button style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
-      Add Event
-    </button>
-  );
+    <>
+      <div className="container">
+        <h1>New Event</h1>
+        <form>
+          <Input
+            onChange={handleInputChange}
+            name="eventname"
+            placeholder="Event Name"
+          />
+          <Input
+            onChange={handleInputChange}
+            name="eventdate"
+            placeholder="Event Date (MM-DD-YYYY)"
+          />
+          < TextArea 
+            onChange={handleInputChange}
+            name="description"
+            placeholder="Event Description"
+          />
+          <FormBtn onClick={handleSubmit}>
+            Create
+          </FormBtn>
+        </form>
+      </div>
+    </>
+  )
 }

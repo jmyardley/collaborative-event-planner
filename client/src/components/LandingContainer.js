@@ -4,7 +4,7 @@ import LandingPage from "./pages/LandingPage";
 import CreateEvent from "./pages/CreateEvent";
 
 
-class LandingPage extends Component {
+class LandingContainer extends Component {
   state = {
     currentPage: "LandingPage"
   };
@@ -35,4 +35,4 @@ class LandingPage extends Component {
 
 }
 
-export default LandingPage;
+export default LandingContainer;
