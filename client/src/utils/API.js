@@ -1,14 +1,18 @@
 import axios from "axios";
 
 export default {
-  // Signs up new User
+  // User routes
   signUpUser: function(userData) {
     return axios.post("api/users/signup", userData)
-    //console.log(userData.username, userData.password);
 
   },
-  
   loginUser: function (userData) {
     return axios.post("api/users/login", userData)
-  }
+  },
+
+  //Event routes
+  createEvent: function (eventData) {
+    return axios.post("api/events/create", eventData)
+  },
+  //loadEvents: function ()
 };
