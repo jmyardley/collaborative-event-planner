@@ -4,15 +4,16 @@ import Login from "./components/pages/Login";
 import Signup from "./components/pages/Signup";
 import LandingContainer from "./components/LandingContainer"
 import LandingPage from "./components/pages/LandingPage";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 
 class App extends Component {
   render() {
     return (
-      <>
-      <Header />
-      <Login />
-      </>
+      <Router>
+        <Route exact path="/loginPage" component={Login} />
+        <Route exact path="/" component={Signup} />
+      </Router>
     );
   }
 }

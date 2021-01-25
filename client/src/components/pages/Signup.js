@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { Input, FormBtn } from "../SignupForm";
 import API from "../../utils/API";
+import { Redirect, useHistory } from "react-router-dom";
 
 export default function Signup() {
   const [formObject, setFormObject] = useState({})
+  // const [targetUrl, setTargetUrl] = useState({})
+  const [loggedIn, setLoggedIn] = useState(false);
 
-  function handleInputChange(event){
+  function handleInputChange(event) {
     const { name, value } = event.target;
-    setFormObject({...formObject, [name]: value})
+    setFormObject({ ...formObject, [name]: value })
   }
 
   function handleSubmit(event) {
@@ -15,10 +18,13 @@ export default function Signup() {
     API.signUpUser({
       username: formObject.username,
       password: formObject.password
-    });
+    }).then(
+      setLoggedIn(true)
+      )
   }
   return (
     <>
+    {loggedIn && <Redirect to="/loginPage" />}
       <div className="container">
         <h1>Signup</h1>
         <form>
