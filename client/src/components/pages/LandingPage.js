@@ -10,7 +10,7 @@ import Jumbotron from "../Jumbotron";
 export default function LandingPage({ children }) {
   const [events, setEvents] = useState([])
 
-  useEffect(() => {
+/*   useEffect(() => {
     loadEvents()
   }, [])
 
@@ -20,7 +20,7 @@ export default function LandingPage({ children }) {
         setEvents(res.data)
       )
       .catch(err => console.log(err));
-  };
+  }; */
 
   return (
     <Container fluid>
