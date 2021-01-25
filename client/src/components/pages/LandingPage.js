@@ -1,9 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { Col, Row, Container } from "../Grid";
+import API from "../../utils/API";
+import { List, ListItem } from "../List";
+import { Link } from "react-router-dom";
+import Jumbotron from "../Jumbotron";
 
-export function LandingPage({ children }) {
+
+
+export default function LandingPage({ children }) {
   const [events, setEvents] = useState([])
 
-  useEffect(() => {
+/*   useEffect(() => {
     loadEvents()
   }, [])
 
@@ -13,7 +20,7 @@ export function LandingPage({ children }) {
         setEvents(res.data)
       )
       .catch(err => console.log(err));
-  };
+  }; */
 
   return (
     <Container fluid>

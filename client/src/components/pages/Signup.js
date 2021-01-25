@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Input, FormBtn } from "./SignupForm";
+import { Input, FormBtn } from "../SignupForm";
+import API from "../../utils/API";
 
-export default function Login() {
+export default function Signup() {
   const [formObject, setFormObject] = useState({})
 
   function handleInputChange(event){
@@ -11,11 +12,15 @@ export default function Login() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    API.signUpUser({
+      username: formObject.username,
+      password: formObject.password
+    });
   }
   return (
     <>
       <div className="container">
-        <h1>Login</h1>
+        <h1>Signup</h1>
         <form>
           <Input
             onChange={handleInputChange}
@@ -31,7 +36,7 @@ export default function Login() {
             Submit
           </FormBtn>
         </form>
-        <a href="*">Sign Up</a>
+        <a href="*">Already signed up? Log in</a>
       </div>
     </>
   )

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { Input, FormBtn } from "./SignupForm";
-import API from "../utils/API";
+import { Input, TextArea, FormBtn } from "../EventForm";
 
-export default function Signup() {
+export default function CreateEvent() {
   const [formObject, setFormObject] = useState({})
 
   function handleInputChange(event){
@@ -12,31 +11,31 @@ export default function Signup() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    API.signUpUser({
-      username: formObject.username,
-      password: formObject.password
-    });
   }
   return (
     <>
       <div className="container">
-        <h1>Signup</h1>
+        <h1>New Event</h1>
         <form>
           <Input
             onChange={handleInputChange}
-            name="username"
-            placeholder="Username"
+            name="eventname"
+            placeholder="Event Name"
           />
           <Input
             onChange={handleInputChange}
-            name="password"
-            placeholder="Password"
+            name="eventdate"
+            placeholder="Event Date (MM-DD-YYYY)"
+          />
+          < TextArea 
+            onChange={handleInputChange}
+            name="description"
+            placeholder="Event Description"
           />
           <FormBtn onClick={handleSubmit}>
-            Submit
+            Create
           </FormBtn>
         </form>
-        <a href="*">Already signed up? Log in</a>
       </div>
     </>
   )
