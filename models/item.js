@@ -6,6 +6,6 @@ const itemSchema = new Schema({
   completed: { type: Boolean, required: true, default: false },
 });
 
-const Item = mongoose.model("Item", userSchema);
+const Item = mongoose.model("Item", itemSchema);
 
 module.exports = Item;
