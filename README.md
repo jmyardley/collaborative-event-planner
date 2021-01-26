@@ -34,6 +34,9 @@
 ![Demonstrative Video]( PASTE URL HERE     )
 
 # QUESTIONS
-• If you have any questions, concerns or suggestions please feel free to contact me with the link below.
+• If you have any questions, concerns or suggestions please feel free to contact one/all of us with the links below.
 GitHub: "https://github.com/lmmccullum"
-
+GitHub: "https://github.com/wmdane"
+GitHub: "https://github.com/jmyardley"
+GitHub: "https://github.com/Trattana95"
+GitHub: "https://github.com/kalynch1292"
