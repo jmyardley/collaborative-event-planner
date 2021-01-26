@@ -1,0 +1,29 @@
+.nav.nav-tabs{
+    background-color: purple;
+    color:white
+
+} 
+a {
+    color :white
+}
+.nav-link{
+    color: white
+}
+.nav-link:hover {
+    color: red;
+}
+
+.btn.btn-signup{
+    background-color: purple;
+    color:white
+}
+
+.container-form{
+    
+    width: 20%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
