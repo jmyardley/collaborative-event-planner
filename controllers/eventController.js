@@ -3,9 +3,9 @@ const db = require("../models");
 module.exports = {
     create: function (req, res) {
         console.log(req.body)
-        db.Item
+/*          db.Item
              .insertMany(req.body.items)
-        db.Event
+ */         db.Event
             .create(req.body)
             .then(dbModel => {
                 res.json(dbModel);
