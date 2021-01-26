@@ -1,4 +1,4 @@
-# Name of Project
+# Collaborative Event Planner
 
 # Table of Contents
 
@@ -7,24 +7,29 @@
   3. [Installation](#Installation)
   4. [Instructions For Use](#InstructionsForUse)
   5. [License](#License)
-  6. [Screenshot/Walkthrough Video](#Screenshot/WalkthroughVideo)
-  7. [Questions](#Questions)
+  6. [Deployed URL](#DeployedURL)
+  7. [Screenshot/Walkthrough Video](#Screenshot/WalkthroughVideo)
+  8. [Questions](#Questions)
 
 # DESCRIPTION
-•  
+• This is an application that can create events and invite other users to those events. Users can then create a shared event checklist that each member of the group can contribute to and assign tasks to themselves to help plan for the event. When tasks are completed, they can be moved to a completed column so that other users know that the task is done.  
+
 # TECHNOLOGY USED
-• 
-• 
-• 
+• React
+• Node/Express
+• Heroku
 
 # INSTALLATION
-• 
+• N/A
 
 # INSTRUCTIONS FOR USE
-•  
+• Click on Deployed URL and input required fields 
+
 # LICENSE
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+# Deployed URL: ""
 
 # SCREENSHOT/WALKTHROUGH VIDEO
 • The included images demonstrates the application’s functionality:
