@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "./components/Header";
 import Login from "./components/pages/Login";
 import Signup from "./components/pages/Signup";
-import LandingContainer from "./components/LandingContainer"
+import Detail from "./components/pages/Detail";
 import LandingPage from "./components/pages/LandingPage";
 import CreateEvent from "./components/pages/CreateEvent";
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -15,6 +15,7 @@ class App extends Component {
       <Router>
         <Header />
         <Route exact path="/loginPage" component={Login} />
+        <Route exact path="/events/:id" component={Detail} />
         <Route exact path="/landingPage" component={LandingPage} />
         <Route exact path="/createEvent" component={CreateEvent} />
         <Route exact path="/signUpPage" component={Signup} />

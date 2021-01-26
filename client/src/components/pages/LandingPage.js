@@ -36,7 +36,7 @@ function LandingPage() {
                   <ListItem key={event._id}>
                     <Link to={"/events/" + event._id}>
                       <strong>
-                        {event.title} created by:
+                        {event.title} created by: 
                     </strong>
                     </Link>
                   </ListItem>
