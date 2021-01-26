@@ -12,6 +12,7 @@ module.exports = {
                         date: req.body.date,
                         descr: req.body.descr,
                         items: ids,
+                        owner: req.user._id
                     })
                     .then(dbModel => {
                         res.json(dbModel);
@@ -32,7 +33,7 @@ module.exports = {
     findAll: function (req, res) {
         db.Event
             .find(req.query)
-            .populate("items")
+            .populate(["items", "owner"])
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     }
