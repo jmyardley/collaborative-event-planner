@@ -3,6 +3,7 @@ import { Input, TextArea, FormBtn, ListItem } from "../EventForm";
 import API from "../../utils/API";
 import { Redirect, useHistory } from "react-router-dom";
 import { set } from "mongoose";
+import Card from "../Card/Index"
 
 
 export default function CreateEvent() {
@@ -22,15 +23,20 @@ export default function CreateEvent() {
       title: formObject.eventname,
       date: formObject.eventdate,
       descr: formObject.description,
-      // items: [formObject.item1, formObject.item2, formObject.item3]
+      items: [
+        { text: formObject.item1 },
+        { text: formObject.item2 },
+        { text: formObject.item3 }
+      ]
     }).then(
       console.log("submit"),
       setEventSubmitted(true)
-    ).catch(err => console.log(err)); 
+    ).catch(err => console.log(err));
   }
   return (
     <>
       {eventSubmitted && <Redirect to="/landingPage" />}
+      <Card>
       <div className="container">
         <h1>New Event</h1>
         <form>
@@ -74,7 +80,8 @@ export default function CreateEvent() {
             Create
           </FormBtn>
         </form>
-      </div>
+      </div> 
+      </Card>
     </>
   )
 }

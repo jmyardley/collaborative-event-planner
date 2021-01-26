@@ -6,6 +6,7 @@ import LandingContainer from "./components/LandingContainer"
 import LandingPage from "./components/pages/LandingPage";
 import CreateEvent from "./components/pages/CreateEvent";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import "./App.css"
 
 
 class App extends Component {
