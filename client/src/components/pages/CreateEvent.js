@@ -3,7 +3,8 @@ import { Input, TextArea, FormBtn, ListItem } from "../EventForm";
 import API from "../../utils/API";
 import { Redirect, useHistory } from "react-router-dom";
 import { set } from "mongoose";
-import Card from "../Card/Index"
+import Style from "./CreateEvent.css"
+// import Card from "../Card/Index"
 
 
 export default function CreateEvent() {
@@ -36,7 +37,9 @@ export default function CreateEvent() {
   return (
     <>
       {eventSubmitted && <Redirect to="/landingPage" />}
-      <Card>
+      {/* <Card> */}
+      <div className="Style-this">
+
       <div className="container">
         <h1>New Event</h1>
         <form>
@@ -81,7 +84,8 @@ export default function CreateEvent() {
           </FormBtn>
         </form>
       </div> 
-      </Card>
+    </div>
+      {/* </Card> */}
     </>
   )
 }

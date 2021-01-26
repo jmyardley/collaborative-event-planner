@@ -14,15 +14,16 @@ a {
 }
 
 .btn.btn-signup{
-    background-color: purple;
+    background-color: #8db596;
+    color:white
+    
+}
+
+.btn.btn-event{
+    background-color: #8db596;
     color:white
 }
-.body {
-    text-align: center;
-    height: 100vh;
-    background-color: #bedbbb;
-  }
-  
+
 .container-form{
     
     width: 50%;
