@@ -1,29 +1,27 @@
 const db = require("../models");
-const passport = require('passport')
+const passport = require('../passport')
 
 
 module.exports = {
     create: function (req, res) {
-        console.log(req.body)
         db.User
             .create(req.body)
-            .then(dbModel => {
+            .then(user => {
                 res.json(dbModel);
                 console.log(dbModel);
             })
             .catch(err => res.status(422).json(err));
     },
 
-    login: function (req, res) {
-        (passport.authenticate('local'),
-        (req, res) => {
-            console.log('logged in', req.user);
-            var userInfo = {
-                username: req.user.username
-      
-            };
-            res.send(userInfo);
-        })(req, res);
+    login: (req, res, next) => {
+        passport.authenticate('local', (err, user) => {
+            if (!user) return res.sendStatus(404);
+            const { username } = user;
+            req.logIn(user, err => {
+                if (err) return next(err);
+            })
+            res.json({ username });
+        })(req, res, next);
     }
 
 
