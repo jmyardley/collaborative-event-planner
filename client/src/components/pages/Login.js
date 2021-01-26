@@ -21,9 +21,7 @@ export default function Login() {
     API.loginUser({
       username: formObject.username,
       password: formObject.password
-    }).then(
-      setLoggedIn(true)
-      )
+    }).then(() => setLoggedIn(true))
   }
   return (
     <>

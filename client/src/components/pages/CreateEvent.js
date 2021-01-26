@@ -22,11 +22,15 @@ export default function CreateEvent() {
       title: formObject.eventname,
       date: formObject.eventdate,
       descr: formObject.description,
-      // items: [formObject.item1, formObject.item2, formObject.item3]
+      items: [
+        { text: formObject.item1 },
+        { text: formObject.item2 },
+        { text: formObject.item3 }
+      ]
     }).then(
       console.log("submit"),
       setEventSubmitted(true)
-    ).catch(err => console.log(err)); 
+    ).catch(err => console.log(err));
   }
   return (
     <>
