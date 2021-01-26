@@ -7,5 +7,7 @@ router.route("/create")
 router.route("/")
   .get(eventController.findAll);
  
+router.route("/:id")
+  .get(eventController.findById);
 
 module.exports = router;

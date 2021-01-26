@@ -3,6 +3,8 @@ import { Input, FormBtn } from "../SignupForm";
 import API from "../../utils/API";
 import { Redirect, useHistory } from "react-router-dom";
 import Header from "../Header"
+import "./Login.css"
+
 
 export default function Signup() {
   const [formObject, setFormObject] = useState({})
@@ -26,6 +28,9 @@ export default function Signup() {
     <>  
 
     {loggedIn && <Redirect to="/landingPage" />}
+
+    <div className="Style-me">
+
       <div className="container-form">
         <h1>Signup</h1>
         <form>
@@ -44,6 +49,7 @@ export default function Signup() {
           </FormBtn>
         </form>
         <a href="loginPage">Already signed up? Log in</a>
+      </div>
       </div>
     </>
   )
