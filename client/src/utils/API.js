@@ -13,6 +13,7 @@ export default {
   //Event routes
   createEvent: function (eventData) {
     return axios.post("api/events/create", eventData)
+    .then(console.log(eventData))
   },
   //loadEvents: function ()
 };

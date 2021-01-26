@@ -1,18 +1,21 @@
 import React, { useState } from "react";
 import { Input, TextArea, FormBtn, ListItem } from "../EventForm";
 import API from "../../utils/API";
+import { Redirect, useHistory } from "react-router-dom";
+import { set } from "mongoose";
 
 
 export default function CreateEvent() {
   const [formObject, setFormObject] = useState({})
+  const [eventSubmitted, setEventSubmitted] = useState(false);
 
-  function handleInputChange(event){
+
+  function handleInputChange(event) {
     const { name, value } = event.target;
-    setFormObject({...formObject, [name]: value})
+    setFormObject({ ...formObject, [name]: value })
   }
 
   function handleSubmit(event) {
-    console.log("test1");
     event.preventDefault();
     console.log("test2");
     API.createEvent({
@@ -21,11 +24,13 @@ export default function CreateEvent() {
       descr: formObject.description,
       items: [formObject.item1, formObject.item2, formObject.item3]
     }).then(
-      console.log("submit")
-    )
+      console.log("submit"),
+      setEventSubmitted(true)
+    ).catch(err => console.log(err)); 
   }
   return (
     <>
+      {eventSubmitted && <Redirect to="/landingPage" />}
       <div className="container">
         <h1>New Event</h1>
         <form>
@@ -42,28 +47,28 @@ export default function CreateEvent() {
             placeholder="Event Date (MM-DD-YYYY)"
           />
           <h5>Description:</h5>
-          < TextArea 
+          < TextArea
             onChange={handleInputChange}
             name="description"
             placeholder="Event Description"
           />
           <h5>Checklist:</h5>
           <ul>
-          <ListItem 
-            onChange={handleInputChange}
-            name="item1"
-            placeholder = "item 1"        
-          />
-          <ListItem 
-            onChange={handleInputChange}
-            name="item2"
-            placeholder = "item 2"         
-          />
-          <ListItem 
-            onChange={handleInputChange}
-            name="item3"
-            placeholder = "item 3"         
-          />
+            <ListItem
+              onChange={handleInputChange}
+              name="item1"
+              placeholder="item 1"
+            />
+            <ListItem
+              onChange={handleInputChange}
+              name="item2"
+              placeholder="item 2"
+            />
+            <ListItem
+              onChange={handleInputChange}
+              name="item3"
+              placeholder="item 3"
+            />
           </ul>
           <FormBtn onClick={handleSubmit}>
             Create
