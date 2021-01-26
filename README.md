@@ -1,29 +1,39 @@
-# Create React Express App
+# Name of Project
 
-## About This Boilerplate
+# Table of Contents
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+  1. [Description](#Description)
+  2. [Technology Used](#TechnologyUsed)
+  3. [Installation](#Installation)
+  4. [Instructions For Use](#InstructionsForUse)
+  5. [License](#License)
+  6. [Screenshot/Walkthrough Video](#Screenshot/WalkthroughVideo)
+  7. [Questions](#Questions)
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+# DESCRIPTION
+•  
+# TECHNOLOGY USED
+• 
+• 
+• 
 
-## Starting the app locally
+# INSTALLATION
+• 
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+# INSTRUCTIONS FOR USE
+•  
+# LICENSE
 
-```
-npm install
-```
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This should install node modules within the server and the client folder.
+# SCREENSHOT/WALKTHROUGH VIDEO
+• The included images demonstrates the application’s functionality:
 
-After both installations complete, run the following command in your terminal:
+![Screenshot](https://i.imgur.com/aUs64iT.png)
+![Screenshot]( PASTE URL HERE     )
+![Demonstrative Video]( PASTE URL HERE     )
 
-```
-npm start
-```
+# QUESTIONS
+• If you have any questions, concerns or suggestions please feel free to contact me with the link below.
+GitHub: "https://github.com/lmmccullum"
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Deployment (Heroku)
-
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
