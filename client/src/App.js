@@ -12,6 +12,7 @@ class App extends Component {
   render() {
     return (
       <Router>
+        <Header />
         <Route exact path="/loginPage" component={Login} />
         <Route exact path="/landingPage" component={LandingPage} />
         <Route exact path="/createEvent" component={CreateEvent} />
