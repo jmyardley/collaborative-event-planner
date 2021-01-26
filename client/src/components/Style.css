@@ -1,5 +1,5 @@
 .nav.nav-tabs{
-    background-color: purple;
+    background-color: #8db596;
     color:white
 
 } 
@@ -10,17 +10,22 @@ a {
     color: white
 }
 .nav-link:hover {
-    color: red;
+    color: #707070;
 }
 
 .btn.btn-signup{
     background-color: purple;
     color:white
 }
-
+.body {
+    text-align: center;
+    height: 100vh;
+    background-color: #bedbbb;
+  }
+  
 .container-form{
     
-    width: 20%;
+    width: 50%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
