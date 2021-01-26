@@ -15,5 +15,9 @@ export default {
     return axios.post("api/events/create", eventData)
     .then(console.log(eventData))
   },
+
+  getEvents: function() {
+    return axios.get("/api/events");
+  }
   //loadEvents: function ()
 };

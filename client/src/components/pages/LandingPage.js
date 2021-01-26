@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Row, Container } from "../Grid";
 import API from "../../utils/API";
 import { List, ListItem } from "../List";
@@ -7,10 +7,10 @@ import Jumbotron from "../Jumbotron";
 
 
 
-export default function LandingPage({ children }) {
+function LandingPage() {
   const [events, setEvents] = useState([])
 
-/*   useEffect(() => {
+  useEffect(() => {
     loadEvents()
   }, [])
 
@@ -20,7 +20,7 @@ export default function LandingPage({ children }) {
         setEvents(res.data)
       )
       .catch(err => console.log(err));
-  }; */
+  };
 
   return (
     <Container fluid>
@@ -31,15 +31,17 @@ export default function LandingPage({ children }) {
           </Jumbotron>
           {events.length ? (
             <List>
-              {events.map(event => (
-                <ListItem key={event._id}>
-                  <Link to={"/events/" + event._id}>
-                    <strong>
-                      {event.title} created by: {event.author}
+              {events.map(event => {
+                return (
+                  <ListItem key={event._id}>
+                    <Link to={"/events/" + event._id}>
+                      <strong>
+                        {event.title} created by:
                     </strong>
-                  </Link>
-                </ListItem>
-              ))}
+                    </Link>
+                  </ListItem>
+                )
+              })}
             </List>
           ) : (
               <h3>No Events Scheduled</h3>
@@ -49,3 +51,5 @@ export default function LandingPage({ children }) {
     </Container>
   );
 }
+
+export default LandingPage;
