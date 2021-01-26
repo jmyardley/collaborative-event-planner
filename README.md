@@ -30,7 +30,7 @@
 • The included images demonstrates the application’s functionality:
 
 ![Screenshot](https://i.imgur.com/aUs64iT.png)
-![Screenshot]( PASTE URL HERE     )
+![Screenshot](https://i.imgur.com/HQ1Ygqi.png)
 ![Demonstrative Video]( PASTE URL HERE     )
 
 # QUESTIONS
