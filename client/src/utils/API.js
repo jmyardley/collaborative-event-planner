@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 export default {
   // User routes
   signUpUser: function(userData) {
@@ -18,6 +19,9 @@ export default {
 
   getEvents: function() {
     return axios.get("/api/events");
+  },
+
+  findById: function (id) {
+    return axios.get("/api/events/" + id);
   }
-  //loadEvents: function ()
 };
