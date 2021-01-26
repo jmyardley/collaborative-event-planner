@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Input, FormBtn } from "../SignupForm";
 import API from "../../utils/API";
 import { Redirect, useHistory } from "react-router-dom";
-import Style from "../Style.css"
+import Style from "../Style.css";
+import "./Login.css"
+
 
 
 
@@ -28,6 +30,7 @@ export default function Login() {
   return (
     <>
         {loggedIn && <Redirect to="/landingPage" />}
+      <div className="Style-me">
       <div className="container-form">
         <h1>Login</h1>
         <form>
@@ -46,6 +49,7 @@ export default function Login() {
           </FormBtn>
         </form>
         <a href="/signUpPage">Sign Up</a>
+      </div>
       </div>
     </>
   )
