@@ -1,12 +1,23 @@
 import React from "react";
+import "./Style.css";
+
 
 function Header(props) {
   return (
     <ul className="nav nav-tabs">
+            <li className="nav-item">
+        <a
+          href="/loginpage"
+          onClick={() => props.handlePageChange("LoginPage")}
+          className={props.currentPage === "LoginPage" ? "nav-link active" : "nav-link"}
+        >
+          Login
+        </a>
+      </li>
       <li className="nav-item">
         <a
-          href="#landing"
-          onClick={() => props.handlePageChange("LandingPage")}
+          href="/landingPage"
+          onClick={() => props.handlePageChange("landingPage")}
           className={props.currentPage === "LandingPage" ? "nav-link active" : "nav-link"}
         >
           My Events
@@ -14,7 +25,7 @@ function Header(props) {
       </li>
       <li className="nav-item">
         <a
-          href="#create"
+          href="/createEvent"
           onClick={() => props.handlePageChange("CreateEvent")}
           className={props.currentPage === "CreateEvent" ? "nav-link active" : "nav-link"}
         >

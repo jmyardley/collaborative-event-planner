@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Input, FormBtn } from "../SignupForm";
 import API from "../../utils/API";
 import { Redirect, useHistory } from "react-router-dom";
+import Style from "../Style.css"
 
 
 
@@ -27,7 +28,7 @@ export default function Login() {
   return (
     <>
         {loggedIn && <Redirect to="/landingPage" />}
-      <div className="container">
+      <div className="container-form">
         <h1>Login</h1>
         <form>
           <Input
