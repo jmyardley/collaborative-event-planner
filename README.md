@@ -1,29 +1,54 @@
-# Create React Express App
+# Collaborative Event Planner
 
-## About This Boilerplate
+# Table of Contents
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+1. [Description](#Description)
+2. [Technology Used](#TechnologyUsed)
+3. [Installation](#Installation)
+4. [Instructions For Use](#InstructionsForUse)
+5. [License](#License)
+6. [Deployed URL](#DeployedURL)
+7. [Screenshot](#Screenshot)
+8. [Questions](#Questions)
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+# DESCRIPTION
 
-## Starting the app locally
+• This is an application that can create events and invite other users to those events. Users can then create a shared event checklist that each member of the group can contribute to and assign tasks to themselves to help plan for the event. When tasks are completed, they can be moved to a completed column so that other users know that the task is done.
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+# TECHNOLOGY USED
 
-```
-npm install
-```
+• React
+• Node/Express
+• Heroku
+• Bootstrap
+• Mongoose
+• Passport
 
-This should install node modules within the server and the client folder.
+# INSTALLATION
 
-After both installations complete, run the following command in your terminal:
+• N/A
 
-```
-npm start
-```
+# INSTRUCTIONS FOR USE
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+• Click on Deployed URL and input required fields
 
-## Deployment (Heroku)
+# LICENSE
 
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+# Deployed URL: "https://salty-eyrie-99522.herokuapp.com/"
+
+# Screenshot
+• The included images demonstrates the application's functionality:
+
+![Screenshot](https://i.imgur.com/aUs64iT.png)
+![Screenshot](https://i.imgur.com/HQ1Ygqi.png)
+
+# QUESTIONS
+
+• If you have any questions, concerns or suggestions please feel free to contact one/all of us with the links below.
+GitHub: "https://github.com/lmmccullum"
+GitHub: "https://github.com/wmdane"
+GitHub: "https://github.com/jmyardley"
+GitHub: "https://github.com/Trattana95"
+GitHub: "https://github.com/kalynch1292"
