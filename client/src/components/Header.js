@@ -16,9 +16,9 @@ function Header(props) {
       </li>
       <li className="nav-item">
         <a
-          href="/landingPage"
-          onClick={() => props.handlePageChange("landingPage")}
-          className={props.currentPage === "LandingPage" ? "nav-link active" : "nav-link"}
+          href="/events"
+          onClick={() => props.handlePageChange("events")}
+          className={props.currentPage === "events" ? "nav-link active" : "nav-link"}
         >
           My Events
         </a>
