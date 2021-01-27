@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Input, FormBtn } from "../SignupForm";
+import { Input, SecretInput, FormBtn } from "../SignupForm";
 import API from "../../utils/API";
 import { Redirect, useHistory } from "react-router-dom";
 import Header from "../Header"
@@ -27,7 +27,7 @@ export default function Signup() {
   return (
     <>  
 
-    {loggedIn && <Redirect to="/landingPage" />}
+    {loggedIn && <Redirect to="/loginPage" />}
 
     <div className="Style-me">
 
@@ -39,7 +39,7 @@ export default function Signup() {
             name="username"
             placeholder="Username"
           />
-          <Input
+          <SecretInput
             onChange={handleInputChange}
             name="password"
             placeholder="Password"

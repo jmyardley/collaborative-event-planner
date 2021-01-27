@@ -10,7 +10,8 @@ import Style from "./CreateEvent.css"
 
 
 function LandingPage() {
-  const [events, setEvents] = useState([])
+  const [events, setEvents] = useState([]);
+  const [owner, setOwner] = useState([]);
 
   useEffect(() => {
     loadEvents()
@@ -19,7 +20,8 @@ function LandingPage() {
   function loadEvents() {
     API.getEvents()
       .then(res =>
-        setEvents(res.data)
+        setEvents(res.data),
+  
       )
       .catch(err => console.log(err));
   };
@@ -40,7 +42,7 @@ function LandingPage() {
                   <ListItem key={event._id}>
                     <Link to={"/events/" + event._id}>
                       <strong>
-                        {event.title} created by: 
+                        {event.title} created by: {event.owner.username}
                     </strong>
                     </Link>
                   </ListItem>
