@@ -23,5 +23,10 @@ export default {
 
   findById: function (id) {
     return axios.get("/api/events/" + id);
+  },
+
+  //Item routes
+  completeItem: function(id) {
+    return axios.put("/api/items/" + id)
   }
 };
