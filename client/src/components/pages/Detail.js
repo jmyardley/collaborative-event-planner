@@ -8,6 +8,7 @@ import Style from "./CreateEvent.css"
 
 function Detail() {
   const [event, setEvent] = useState({})
+  const [owner, setOwner] = useState({})
   let { id } = useParams();
 
   useEffect(() => {
@@ -21,6 +22,7 @@ function Detail() {
     API.findById(eventId)
     .then(res => {
       setEvent(res.data)
+      setOwner(res.data.owner)
       console.log(res.data)
     })
     .catch(err => console.log(err));
@@ -33,8 +35,14 @@ function Detail() {
         <Col size="md-12">
           <Jumbotron>
             <h1>
-              {event.title} by 
+              {event.title} 
             </h1>
+            <h3>
+              Hosted by {owner.username}
+            </h3>
+            <h3>
+              On {event.date}
+            </h3>
           </Jumbotron>
         </Col>
       </Row>
@@ -67,7 +75,7 @@ function Detail() {
       </Row>
       <Row>
         <Col size="md-2">
-          <Link to="/">← Back to Events</Link>
+          <Link to="/events">← Back to Events</Link>
         </Col>
       </Row>
     </Container>

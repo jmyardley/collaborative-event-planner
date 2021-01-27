@@ -36,7 +36,7 @@ export default function CreateEvent() {
   }
   return (
     <>
-      {eventSubmitted && <Redirect to="/landingPage" />}
+      {eventSubmitted && <Redirect to="/events" />}
       {/* <Card> */}
       <div className="Style-this">
 
