@@ -27,7 +27,7 @@ export default function Signup() {
   return (
     <>  
 
-    {loggedIn && <Redirect to="/events" />}
+    {loggedIn && <Redirect to="/loginPage" />}
 
     <div className="Style-me">
 
