@@ -27,7 +27,7 @@ export default function Login() {
   }
   return (
     <>
-        {loggedIn && <Redirect to="/landingPage" />}
+        {loggedIn && <Redirect to="/events" />}
       <div className="Style-me">
       <div className="container-form">
         <h1>Login</h1>
