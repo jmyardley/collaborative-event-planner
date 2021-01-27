@@ -29,8 +29,14 @@ app.get("*", function(req, res) {
 });
 
 mongoose.connect(
-  // process.env.MONGODB_URI || 
-  "mongodb://localhost/collaborativeeventplanner"
+  process.env.MONGODB_URI || 
+  "mongodb://localhost/collaborativeeventplanner",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
   );
 
 app.listen(PORT, function() {
