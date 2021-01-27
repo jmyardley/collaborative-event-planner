@@ -23,13 +23,13 @@
 • N/A
 
 # INSTRUCTIONS FOR USE
-• Click on Deployed URL and input required fields 
+• Click on Deployed URL and input required fields
 
 # LICENSE
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# Deployed URL: ""
+# Deployed URL: "https://salty-eyrie-99522.herokuapp.com/"
 
 # SCREENSHOT/WALKTHROUGH VIDEO
 • The included images demonstrates the application’s functionality:
