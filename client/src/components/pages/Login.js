@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Input, FormBtn } from "../SignupForm";
+import { Input, SecretInput, FormBtn } from "../SignupForm";
 import API from "../../utils/API";
 import { Redirect, useHistory } from "react-router-dom";
 import Style from "../Style.css";
@@ -37,7 +37,7 @@ export default function Login() {
             name="username"
             placeholder="Username"
           />
-          <Input
+          <SecretInput
             onChange={handleInputChange}
             name="password"
             placeholder="Password"

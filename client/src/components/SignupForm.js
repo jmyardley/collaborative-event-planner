@@ -8,6 +8,15 @@ export function Input(props) {
   );
 }
 
+export function SecretInput(props) {
+  return (
+    <div className="form-group">
+      <input type="password" className="form-control" {...props} />
+    </div>
+  );
+}
+
+
 export function TextArea(props) {
   return (
     <div className="form-group">

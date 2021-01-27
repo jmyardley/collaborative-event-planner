@@ -13,21 +13,27 @@ function Detail() {
 
   useEffect(() => {
     console.log(id)
-    if(id){
+    if (id) {
       loadEvent(id)
     }
   }, [id])
 
   function loadEvent(eventId) {
     API.findById(eventId)
-    .then(res => {
-      setEvent(res.data)
-      setOwner(res.data.owner)
-      console.log(res.data)
-    })
-    .catch(err => console.log(err));
+      .then(res => {
+        setEvent(res.data)
+        setOwner(res.data.owner)
+        console.log(res.data)
+      })
+      .catch(err => console.log(err));
   };
-  
+
+  function completeItem(id) {
+    API.completeItem(id)
+      .then(res => window.location.reload())
+      .catch(err => console.log(err));
+  }
+
   return (
     // <h1>{id}</h1>
     <Container fluid>
@@ -35,7 +41,7 @@ function Detail() {
         <Col size="md-12">
           <Jumbotron>
             <h1>
-              {event.title} 
+              {event.title}
             </h1>
             <h3>
               Hosted by {owner.username}
@@ -58,12 +64,12 @@ function Detail() {
       </Row>
       <Row>
         <Col size="md-10 md-offset-1">
-        {event.items ? (
+          {event.items ? (
             <List>
               {event.items.map(item => {
                 return (
                   <ListItem key={item._id}>
-                    <p>{item.text}</p>
+                    <p>{item.text} <span><button style={{ float: "right" }} className={item.completed ? `btn btn-success` : `btn btn-danger`} onClick={() => completeItem(item._id)}>{item.completed ? `Complete` : `Incomplete`}</button></span></p>
                   </ListItem>
                 )
               })}
